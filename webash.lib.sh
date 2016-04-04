@@ -13,7 +13,7 @@ bash_setup()
     # Defined, variables must be
     set -o nounset
     
-    # Limits IFS to \n only
+    # Limit IFS to '\n'
     IFS=$'\n'
     
     # Setup the exit handler, called when an error is returned by any command, thanks to set -o errexit:
