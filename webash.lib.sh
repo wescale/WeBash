@@ -27,8 +27,8 @@ bash_setup()
     trap 'exit_handler $? $LINENO "${BASH_LINENO[*]}" "${BASH_SOURCE[*]}" "$BASH_COMMAND" "${FUNCNAME[*]:-empty}"'  ERR
 }
 
-# Validate a value for a given option against a list of allowed values, exits with an error message  in case it does not match
-# Relies on extglob which is set 
+# Validate a value for a given option against a list of allowed values, exits with an error message if it does not match
+# Relies on extglob which is saved, set and restored according to its current value
 validate_option()
 {
     local option="$1"
